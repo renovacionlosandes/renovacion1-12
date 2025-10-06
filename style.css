@@ -246,17 +246,24 @@ footer {
 /* ===== GRACIAS ===== */
 .mensaje-gracias {
   text-align: center;
-  margin-top: 50px;
+  margin: 60px auto;
+  max-width: 700px;
+  padding: 20px;
 }
 
 .boton-volver {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #0078D4;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.boton-volver:hover {
+  background-color: #005a9e;
 }
 
 /* Mejora de legibilidad en móviles */
