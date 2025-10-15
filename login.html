@@ -74,6 +74,69 @@
       document.getElementById('loginPanel').classList.remove('hidden');
     });
   </script>
-  
+
+  <!-- Firebase SDKs -->
+https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js
+https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js
+https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js
+
+<script>
+  // Configuración de Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyCRtQyOWmrzZkSlR-MGLyyligI5JkzG5is",
+    authDomain: "renovacion1-12.firebaseapp.com",
+    projectId: "renovacion1-12",
+    storageBucket: "renovacion1-12.firebasestorage.app",
+    messagingSenderId: "445726659571",
+    appId: "1:445726659571:web:255b7e6d4f5805b837f886"
+  };
+
+  // Inicializar Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  // Manejar el login
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('emailLogin').value;
+    const password = document.getElementById('passLogin').value;
+
+    auth.signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        const uid = userCredential.user.uid;
+
+        // Buscar el rol en Firestore
+        db.collection('usuarios').doc(uid).get()
+          .then((doc) => {
+            if (doc.exists) {
+              const rol = doc.data().rol;
+
+              // Redirigir según el rol
+              if (rol === 'Aprendiz') {
+                window.location.href = 'aprendiz.html';
+              } else if (rol === 'Companero') {
+                window.location.href = 'companero.html';
+              } else if (rol === 'Maestro') {
+                window.location.href = 'maestro.html';
+              } else {
+                alert('Rol no reconocido.');
+              }
+            } else {
+              alert('No se encontró información de rol.');
+            }
+          })
+          .catch((error) => {
+            console.error('Error al obtener el rol:', error);
+            alert('Error al obtener el rol.');
+          });
+      })
+      .catch((error) => {
+        console.error('Error de login:', error);
+        alert('Correo o contraseña incorrectos.');
+      });
+  });
+</script>	
+	
 </body>
 </html>
