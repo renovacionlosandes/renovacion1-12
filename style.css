@@ -364,6 +364,148 @@ button[type="submit"]:active {
   }
 }
 
+/* ====== Login ====== */
+.login-main {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.login-card {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0b3d91;
+}
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-grid label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.form-grid input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #0b3d91;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #082e6d;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: #0b3d91;
+  border: 1px solid #0b3d91;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.row-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.login-actions {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.login-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-main {
+  flex: 1;
+}
+
+/* ====== Boton Login ====== */
+.nav-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.boton-login-nav a {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  padding: 6px 14px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.boton-login-nav a:hover {
+  background-color: #2c4fb2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
+}
+
+.icono-boton {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.boton-login-nav::before {
+  content: "⚠️";
+  font-size: 1rem;
+}
+
 @media (max-width: 600px) {
   header h1 {
     font-size: 32px;
