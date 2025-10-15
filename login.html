@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área de Miembros | Renovación 1-12</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="encabezado">
+	<img class="logo-renovacion" src="imagenes/renovacion_logo_3d.png" alt="Logo de renovación 1-12">
+	<div class="texto-encabezado">
+		<h1>Renovación 1-12</h1>
+		<p>Área privada de Renovación 1-12</p>
+	</div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index_r.html">Inicio</a></li>
+      <li><a href="historia_r.html">Historia</a></li>
+      <li><a href="#">Noticias y Eventos</a></li>
+      <li><a href="#">Arte y Cultura</a></li>
+      <li><a href="contacto_r.html">Contacto</a></li>
+    </ul>
+  </nav>
+  
+    <main class="login-main">
+	<section class="login-card" id="loginPanel">
+	<h2>Iniciar sesión</h2>
+	<p>Acceso exclusivo para miembros autorizados.</p>
+	<form id="loginForm" class="form-grid">
+		<label for="emailLogin">Correo</label>
+		<input id="emailLogin" type="email" placeholder="tu@correo.com" autocomplete="username" required>
+	
+		<label for="passLogin">Contraseña</label>
+		<input id="passLogin" type="password" placeholder="••••••••" autocomplete="current-password" required>
+	
+		<button id="btnLogin" class="btn-primary" type="submit">Entrar</button>
+	
+		<div class="login-actions">
+		<a id="forgotPasswordLink" href="#">¿Olvidé mi contraseña?</a>
+		</div>
+	</form>
+	</section>
+	
+	<section class="login-card hidden" id="resetPanel" aria-hidden="true">
+	<h2>Restablecer contraseña</h2>
+	<p>Ingresa tu email y te enviaremos un enlace para restablecerla.</p>
+	<form id="resetForm" class="form-grid">
+		<label for="emailReset">Correo</label>
+		<input id="emailReset" type="email" placeholder="tu@correo.com" autocomplete="email" required>
+		<div class="row-actions">
+		<button id="btnReset" class="btn-primary" type="submit">Enviar enlace</button>
+		<button id="btnVolverLogin" class="btn-ghost" type="button">Volver al login</button>
+		</div>
+	</form>
+	</section>
+  </main>
+
+  <footer class="login-footer">
+    <p>&copy; 2025 Renovación 1-12. Todos los derechos reservados.</p>
+  </footer>
+  
+    <script>
+    document.getElementById('forgotPasswordLink')?.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('loginPanel').classList.add('hidden');
+      document.getElementById('resetPanel').classList.remove('hidden');
+    });
+
+    document.getElementById('btnVolverLogin')?.addEventListener('click', function() {
+      document.getElementById('resetPanel').classList.add('hidden');
+      document.getElementById('loginPanel').classList.remove('hidden');
+    });
+  </script>
+  
+</body>
+</html>
