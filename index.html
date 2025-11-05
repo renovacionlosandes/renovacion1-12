@@ -65,6 +65,7 @@
 	<p>&#x1F76A; S∴F∴U∴</p>
   </footer>
 
+	 <!-- [script-java] -->
 <script>
     const banners = document.querySelectorAll('.banner-img');
     let currentIndex = 0;
@@ -76,6 +77,19 @@
     }
 
     setInterval(changeBanner, 4000); // troca a cada 4 segundos
+ </script>
+ <script>
+    const modal = document.getElementById("logiasModal");
+    const btn = document.getElementById("verLogiasBtn");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = () => modal.style.display = "block";
+    span.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => {
+      if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  };
  </script>
 	
 </body>
