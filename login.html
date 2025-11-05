@@ -69,7 +69,8 @@
     <p>&copy; 2025 Renovación 1-12. Todos los derechos reservados.</p>
 	<p>&#x1F76A; S∴F∴U∴</p>
   </footer>
-  
+
+	 <!-- [script-java] -->
     <script>
     document.getElementById('forgotPasswordLink')?.addEventListener('click', function(e) {
       e.preventDefault();
@@ -160,10 +161,23 @@ https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js
 
     setInterval(changeBanner, 4000); // troca a cada 4 segundos
 </script>
-	
+  <script>
+    const modal = document.getElementById("logiasModal");
+    const btn = document.getElementById("verLogiasBtn");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = () => modal.style.display = "block";
+    span.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => {
+      if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  };
+  </script>
 	
 </body>
 </html>
+
 
 
 
