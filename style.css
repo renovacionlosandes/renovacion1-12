@@ -321,7 +321,9 @@ header.encabezado {
   max-width: 600px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   font-family: 'Georgia', serif; /* Tipografía elegante */
-  border: 2px solid #d4af37; /* Borde dorado opcional *
+  border: 2px solid #d4af37; /* Borde dorado opcional */
+  overflow-y: auto;
+  max-height: 70%;
 }
 
 .modal-content h2 {
@@ -340,6 +342,13 @@ header.encabezado {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.icono-h2 {
+  width: 54px;       /* Tamaño pequeño */
+  height: 54px;      /* Mantener proporción */
+  vertical-align: middle; /* Alineado con el texto */
+  margin-right: 8px; /* Espacio entre imagen y texto */
 }
 
 /* ===== GRACIAS ===== */
