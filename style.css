@@ -247,13 +247,13 @@ header.encabezado {
 /* Responsivo */
 @media (max-width: 1024px) {
   header.encabezado {
-    height: 200px;
+    height: 240px;
   }
 }
 
 @media (max-width: 768px) {
   header.encabezado {
-    height: 180px;
+    height: 220px;
   }
 }
 
