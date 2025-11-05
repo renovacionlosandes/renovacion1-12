@@ -579,3 +579,12 @@ body {
     font-size: 16px;
   }
 }
+
+html, body {
+  overflow-x: hidden; /* elimina scroll horizontal */
+}
+
+* {
+  box-sizing: border-box; /* evita que padding sume al ancho total */
+}
+
