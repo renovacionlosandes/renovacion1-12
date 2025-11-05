@@ -253,7 +253,7 @@ header.encabezado {
 
 @media (max-width: 768px) {
   header.encabezado {
-    height: 140px;
+    height: 180px;
   }
 }
 
