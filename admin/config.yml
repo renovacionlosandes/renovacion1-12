@@ -1,7 +1,7 @@
+yaml
 backend:
   name: git-gateway
   branch: main
-  identity: true
 
 media_folder: "imagenes" # Carpeta donde se guardarán las imágenes
 public_folder: "/imagenes"
@@ -20,5 +20,6 @@ collections:
         file: "historia.html"
         fields:
           - { label: "Contenido", name: "body", widget: "markdown" }
+
 
 
