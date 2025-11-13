@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "imagenes" # Carpeta donde se guardarán las imágenes
+public_folder: "/imagenes"
+
+collections:
+  - name: "paginas"
+    label: "Páginas"
+    files:
+      - label: "Inicio"
+        name: "inicio"
+        file: "index.html"
+        fields:
+          - { label: "Contenido", name: "body", widget: "markdown" }
+      - label: "Historia"
+        name: "historia"
+        file: "historia.html"
+        fields:
