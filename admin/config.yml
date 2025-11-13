@@ -18,3 +18,5 @@ collections:
         name: "historia"
         file: "historia.html"
         fields:
+          - { label: "Contenido", name: "body", widget: "markdown" }
+
