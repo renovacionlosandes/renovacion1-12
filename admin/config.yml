@@ -1,4 +1,3 @@
-yaml
 backend:
   name: git-gateway
   branch: main
@@ -20,6 +19,7 @@ collections:
         file: "historia.html"
         fields:
           - { label: "Contenido", name: "body", widget: "markdown" }
+
 
 
 
