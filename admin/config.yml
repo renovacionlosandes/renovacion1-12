@@ -3,7 +3,7 @@ backend:
   repo: renovacionlosandes/renovacion1-12
   branch: main
   auth_type: implicit
-  app_id: 
+  app_id: Ov23liJwcsM3nMKeXPLk
   
 media_folder: "imagenes" # Carpeta donde se guardarán las imágenes
 public_folder: "/imagenes"
@@ -22,6 +22,7 @@ collections:
         file: "historia.html"
         fields:
           - { label: "Contenido", name: "body", widget: "markdown" }
+
 
 
 
