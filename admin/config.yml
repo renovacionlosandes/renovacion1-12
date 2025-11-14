@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main
   
 media_folder: "imagenes" # Carpeta donde se guardarán las imágenes
@@ -19,6 +19,7 @@ collections:
         file: "historia.html"
         fields:
           - { label: "Contenido", name: "body", widget: "markdown" }
+
 
 
 
