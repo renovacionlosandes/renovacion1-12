@@ -15,8 +15,9 @@ bienvenida:
         Renovación 1-12 es más que una logia, es un faro que guía con principios de libertad, igualdad y fraternidad, abiertos a quienes buscan construir un mundo más justo, consciente y armonioso.
     imagen: "imagenes/Vitruviano.png"
 
-Secciones:
+secciones:
     - tipo: "texto"
       titulo: "Bienvenidos"
       contenido: |
+
         Explora los principios, historia y cultura de nuestra logia masónica Renovación 1-12.
