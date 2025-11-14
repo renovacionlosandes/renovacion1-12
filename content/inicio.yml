@@ -1,0 +1,22 @@
+title: "Inicio"
+
+banner:
+    - "imgbanner/banner1.png"
+    - "imgbanner/banner2.png"
+    - "imgbanner/banner3.png"
+    
+logo: "imagenes/renovacion_logo_3d.png"
+
+bienvenida:
+    titulo: "✨ Bienvenidos a Renovación 1-12 ✨"
+    texto: |
+        Un espacio de luz, sabiduría y fraternidad.<br><br>
+        En el corazón de Bucaramanga, se alza una logia que honra la tradición, cultiva el conocimiento y abraza el espíritu de renovación. Aquí, cada paso es una invitación al despertar interior, al respeto profundo por los valores universales y al compromiso con el crecimiento colectivo.<br><br>
+        Renovación 1-12 es más que una logia, es un faro que guía con principios de libertad, igualdad y fraternidad, abiertos a quienes buscan construir un mundo más justo, consciente y armonioso.
+    imagen: "imagenes/Vitruviano.png"
+
+Secciones:
+    - tipo: "texto"
+      titulo: "Bienvenidos"
+      contenido: |
+        Explora los principios, historia y cultura de nuestra logia masónica Renovación 1-12.
