@@ -1,5 +1,3 @@
-const fetch = require('node-fetch');
-
 exports.handler = async (event) => {
   const code = event.queryStringParameters.code;
   const client_id = process.env.GITHUB_CLIENT_ID;
@@ -18,4 +16,5 @@ exports.handler = async (event) => {
   };
 
 };
+
 
