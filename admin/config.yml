@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  repo: https://github.com/renovacionlosandes/renovacion1-12
   branch: main
   
 media_folder: "imagenes" # Carpeta donde se guardarán las imágenes
@@ -20,6 +19,7 @@ collections:
         file: "historia.html"
         fields:
           - { label: "Contenido", name: "body", widget: "markdown" }
+
 
 
 
