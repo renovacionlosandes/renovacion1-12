@@ -21,14 +21,15 @@ collections:
           - label: "Banner"
             name: "banner"
             widget: "list"
-            field: { label: "Imagen", name: "img", widgwt: "image" }
+            fields: 
+               - { label: "Imagen", name: "imagen", widgwt: "image" }
 
           - { label: "Logo", name: "logo", widget: "image" }
 
           - label: "Bienvenida"
             name: "bienvenida"
             widget: "object"
-            field:
+            fields:
               - { label: "Titulo", name: "titulo", widget: "string" }
               - { label: "Texto", name: "texto", widgwt: "markdown" }
               - { label: "Imagen", name: "imagen", widget: "image" }
@@ -40,12 +41,7 @@ collections:
              - { label: "Tipo", name: "tipo", widget: "string"}
              - { label: "Título", name: "titulo", widget: "string" }
              - { label: "Contenido", name: "contenido", widget: "markdown" }
-            
-      - label: "Historia"
-        name: "historia"
-        file: "historia.html"
-        fields:
-          - { label: "Contenido", name: "body", widget: "markdown" }
+
 
 
 
