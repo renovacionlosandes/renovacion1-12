@@ -3,40 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Renovación 1-12</title>
+  <title>Área de Miembros | Renovación 1-12</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="encabezado">
-	  
+
 	<div class="top-banner">
 		<img src="imgbanner/banner1.png" alt="Banner 1" class="banner-img">
 		<img src="imgbanner/banner2.png" alt="Banner 2" class="banner-img">
 		<img src="imgbanner/banner3.png" alt="Banner 3" class="banner-img">
 	</div>
-	  
+	
 	<img class="logo-renovacion" src="imagenes/renovacion_logo_3d.png" alt="Logo de renovación 1-12">
 	<div class="texto-encabezado">
 		<h1>Renovación 1-12</h1>
-		<p>Logia Masónica de Bucaramanga - Gran Logia de los Andes</p>
+		<p>Área privada de Renovación 1-12</p>
 	</div>
   </header>
 
   <nav>
-	<div class="nav-contenedor">
     <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="historia.html">Historia</a></li>
+      <li><a href="index_r.html">Inicio</a></li>
+      <li><a href="historia_r.html">Historia</a></li>
 	  <li><a href="#" id="verLogiasBtn">&#x1F76A; Logias</a></li>
       <li><a href="#">Noticias y Eventos</a></li>
       <li><a href="#">Arte y Cultura</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="contacto_r.html">Contacto</a></li>
     </ul>
-
-	<div class="boton-login-nav">
-		<a href="login.html">Área Restricta</a>
-    </div>
-   </div>
   </nav>
 
   <!-- Modal para ver logias -->
@@ -64,44 +58,125 @@
       <li>Triángulo pedro fermín de vargas - [2022]</li>
       <li>Triángulo apolo - [2022]</li>
    </ul>
-     <h2><img src="imagenes/boton_masonico.png" alt="Símbolo Masónico" class="icono-h2">Templos en Santander</h2>
-   <ul>
-      <li>&#x1F76A; Socorro</li>
-      <li>&#x1F76A; Bucaramanga</li>
-      <li>&#x1F76A; Barrancabermeja</li>
-   </ul>
   </div>
   </div>
-
-<section id="inicio" class="bienvenida">
-  <div class="contenedor-bienvenida">
-    <div class="texto-bienvenida">
-      <h2>✨ Bienvenidos a Renovación 1-12 ✨</h2>
-      <p>
-        Un espacio de luz, sabiduría y fraternidad.<br><br>
-        En el corazón de Bucaramanga, se alza una logia que honra la tradición, cultiva el conocimiento y abraza el espíritu de renovación. Aquí, cada paso es una invitación al despertar interior, al respeto profundo por los valores universales y al compromiso con el crecimiento colectivo.<br><br>
-        Renovación 1-12 es más que una logia, es un faro que guía con principios de libertad, igualdad y fraternidad, abiertos a quienes buscan construir un mundo más justo, consciente y armonioso.
-      </p>
-	 <a href="historia.html" class="boton-conoce-mas">Conoce Más...</a>
-    </div>
-		<div class="imagen-bienvenida">
-			<img src="imagenes/Vitruviano.png">
+  
+    <main class="login-main">
+	<section class="login-card" id="loginPanel">
+	<h2>Iniciar sesión</h2>
+	<p>Acceso exclusivo para miembros autorizados.</p>
+	<form id="loginForm" class="form-grid">
+		<label for="emailLogin">Correo</label>
+		<input id="emailLogin" type="email" placeholder="tu@correo.com" autocomplete="username" required>
+	
+		<label for="passLogin">Contraseña</label>
+		<input id="passLogin" type="password" placeholder="••••••••" autocomplete="current-password" required>
+	
+		<button id="btnLogin" class="btn-primary" type="submit">Entrar</button>
+	
+		<div class="login-actions">
+		<a id="forgotPasswordLink" href="#">¿Olvidé mi contraseña?</a>
 		</div>
-  </div>
-</section>
-
-  <main>
-    <h2>Bienvenidos</h2>
-    <p>Explora los principios, historia y cultura de nuestra logia masónica Renovación 1-12.</p>
+	</form>
+	</section>
+	
+	<section class="login-card hidden" id="resetPanel" aria-hidden="true">
+	<h2>Restablecer contraseña</h2>
+	<p>Ingresa tu email y te enviaremos un enlace para restablecerla.</p>
+	<form id="resetForm" class="form-grid">
+		<label for="emailReset">Correo</label>
+		<input id="emailReset" type="email" placeholder="tu@correo.com" autocomplete="email" required>
+		<div class="row-actions">
+		<button id="btnReset" class="btn-primary" type="submit">Enviar enlace</button>
+		<button id="btnVolverLogin" class="btn-ghost" type="button">Volver al login</button>
+		</div>
+	</form>
+	</section>
   </main>
 
-  <footer>
+  <footer class="login-footer">
     <p>&copy; 2025 Renovación 1-12. Todos los derechos reservados.</p>
 	<p>&#x1F76A; S∴F∴U∴</p>
   </footer>
 
-	 <!-- [script-java] -->
+ <!-- [script-java] -->  
+    <script>
+    document.getElementById('forgotPasswordLink')?.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('loginPanel').classList.add('hidden');
+      document.getElementById('resetPanel').classList.remove('hidden');
+    });
+
+    document.getElementById('btnVolverLogin')?.addEventListener('click', function() {
+      document.getElementById('resetPanel').classList.add('hidden');
+      document.getElementById('loginPanel').classList.remove('hidden');
+    });
+  </script>
+  
+  <!-- Firebase SDKs -->
+<script>https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js</script>
+<script>https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js</script>
+<script>https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js</script>
+
 <script>
+  // Configuración de Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyCRtQyOWmrzZkSlR-MGLyyligI5JkzG5is",
+    authDomain: "renovacion1-12.firebaseapp.com",
+    projectId: "renovacion1-12",
+    storageBucket: "renovacion1-12.firebasestorage.app",
+    messagingSenderId: "445726659571",
+    appId: "1:445726659571:web:255b7e6d4f5805b837f886"
+  };
+
+  // Inicializar Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  // Manejar el login
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('emailLogin').value;
+    const password = document.getElementById('passLogin').value;
+
+    auth.signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        const uid = userCredential.user.uid;
+
+        // Buscar el rol en Firestore
+        db.collection('usuarios').doc(uid).get()
+          .then((doc) => {
+            if (doc.exists) {
+              const rol = doc.data().rol;
+
+              // Redirigir según el rol
+              if (rol === 'Aprendiz') {
+                window.location.href = 'aprendiz.html';
+              } else if (rol === 'Companero') {
+                window.location.href = 'companero.html';
+              } else if (rol === 'Maestro') {
+                window.location.href = 'maestro.html';
+              } else {
+                alert('Rol no reconocido.');
+              }
+            } else {
+              alert('No se encontró información de rol.');
+            }
+          })
+          .catch((error) => {
+            console.error('Error al obtener el rol:', error);
+            alert('Error al obtener el rol.');
+          });
+      })
+      .catch((error) => {
+        console.error('Error de login:', error);
+        alert('Correo o contraseña incorrectos.');
+      });
+  });
+</script>
+
+  <script>
     const banners = document.querySelectorAll('.banner-img');
     let currentIndex = 0;
 
@@ -112,8 +187,8 @@
     }
 
     setInterval(changeBanner, 4000); // troca a cada 4 segundos
- </script>
- <script>
+  </script>
+  <script>
     const modal = document.getElementById("logiasModal");
     const btn = document.getElementById("verLogiasBtn");
     const span = document.getElementsByClassName("close")[0];
@@ -125,7 +200,7 @@
         modal.style.display = "none";
     }
   };
- </script>
-	
+  </script>
+
 </body>
 </html>
