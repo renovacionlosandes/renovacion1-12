@@ -7,7 +7,8 @@
 <body>
      <script>
           // Redirige automáticamente a la aplicación OAuth
-          window.location.href = window.location.origin + "/renovacion1-12/admin/";
+          window.location.hash = window.location.search.replace('?', '#');
+          window.location.href = window.location.origin + window.location.pathname.replace('callback.html', '') + window.location.hash;
      </script>
 </body>
 </html>
