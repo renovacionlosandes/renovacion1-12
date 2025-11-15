@@ -1,6 +1,0 @@
-[build]
-  functions = "netlify/functions"
-  publish = "." # ou a pasta onde está seu site
-
-[functions]
-  node_bundler = "esbuild"
