@@ -2,10 +2,8 @@ backend:
   name: github
   repo: renovacionlosandes/renovacion1-12
   branch: main
-  auth_type: oauth
+  auth_type: implicit
   app_id: Ov23liJwcsM3nMKeXPLk
-  base_url: "https://decap-serverless-oauth.netlify.app"
-  auth_endpoint: "auth"
   
 media_folder: "imagenes" # Carpeta donde se guardarán las imágenes
 public_folder: "/imagenes"
@@ -43,6 +41,7 @@ collections:
               - { label: "Tipo", name: "tipo", widget: "string"}
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Contenido", name: "contenido", widget: "markdown" }
+
 
 
 
