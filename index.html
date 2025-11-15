@@ -1,7 +1,3 @@
----
-title: "Inicio"
----
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,75 +5,127 @@ title: "Inicio"
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Renovación 1-12</title>
   <link rel="stylesheet" href="style.css">
-	<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 </head>
 <body>
+  <header class="encabezado">
+  	
+	<div class="top-banner">
+		<img src="imgbanner/banner1.png" alt="Banner 1" class="banner-img">
+		<img src="imgbanner/banner2.png" alt="Banner 2" class="banner-img">
+		<img src="imgbanner/banner3.png" alt="Banner 3" class="banner-img">
+	</div>
 	
-	<script>
- async function cargarInicio() {
- const resp = await fetch("content/inicio.yml");
- const text = await resp.text();
- const data = jsyaml.load(text);
-
-	 // Banner
- const bannerDiv = document.querySelector(".top-banner");
- bannerDiv.innerHTML = data.banner
-   .map(src => `<img src="${src}" class="banner-img">`)
-   .join("");
- 
-	 // Logo
- document.querySelector(".logo-renovacion").src = data.logo;
- 
-	 // Bienvenida
- document.getElementById("bienvenida-titulo").innerHTML = data.bienvenida.titulo;
- document.getElementById("bienvenida-texto").innerHTML = data.bienvenida.texto;
- document.getElementById("bienvenida-imagen").src = data.bienvenida.imagen;
- 
-	 // Secciones dinámicas
- const secDiv = document.getElementById("secciones");
- secDiv.innerHTML = data.secciones.map(sec => `
-<section>
-<h2>${sec.titulo}</h2>
-<p>${sec.contenido}</p>
-</section>
- `).join("");
-}
-cargarInicio();
-  </script>
-
-	<header class="encabezado">
-	  
-	<div class="top-banner"></div>
-	  
-	<img class="logo-renovacion" src="" alt="Logo Renovación 1-12">
-		
+	<img class="logo-renovacion" src="imagenes/renovacion_logo_3d.png" alt="Logo de renovación 1-12">
 	<div class="texto-encabezado">
 		<h1>Renovación 1-12</h1>
 		<p>Logia Masónica de Bucaramanga - Gran Logia de los Andes</p>
 	</div>
   </header>
+  
+  <nav>
+   <div class="nav-contenedor">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="historia.html">Historia</a></li>
+	  <li><a href="#" id="verLogiasBtn">&#x1F76A; Logias</a></li>
+      <li><a href="#">Noticias y Eventos</a></li>
+      <li><a href="#">Arte y Cultura</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+	  
+    <div class="boton-login-nav">
+		<a href="login.html">Acceso a miembros</a>
+    </div>
+   </div>
+  </nav>
+  
+  <!-- Modal para ver logias -->
+   <div id="logiasModal" class="modal">
+   <div class="modal-content">
+	<span class="close">&times;</span>
+	 <h2><img src="imagenes/boton_masonico_3.png" alt="Símbolo Masónico" class="icono-h2">Logias - Gran Oriente de los Andes</h2>
+   <ul>
+      <li>Santander 57 - [1912]</li>
+      <li>Renovación 1-12  - [1928]</li>
+      <li>Hombres Libres 2 - [1954]</li>
+	  <li>Amor 3 - [1969]</li>
+	  <li>Cosmos 4 - [1969]</li>
+      <li>Cóndor 5 - [1971]</li>
+      <li>Faro 6 - [1974]</li>
+      <li>Unión Fraternal 7 - [1974]</li>
+      <li>Estrella de Oriente 8 - [1979]</li>
+      <li>Génesis 9 - [1985]</li>
+      <li>Estrella del Saravita 10-5 [...]</li>
+      <li>Libertad 11 - [1987]</li>
+      <li>Solidaridad 12 - [1993]</li>
+      <li>Santander y Omaña 15-1 - [1994]</li>
+      <li>Solidaridad Austral 13 - [2014]</li>
+      <li>Alianza Fraterna 14 - [2015]</li>
+      <li>Triángulo pedro fermín de vargas - [2022]</li>
+      <li>Triángulo apolo - [2022]</li>
+   </ul>
+     <h2><img src="imagenes/boton_masonico.png" alt="Símbolo Masónico" class="icono-h2">Templos en Santander</h2>
+   <ul>
+      <li>&#x1F76A; Socorro</li>
+      <li>&#x1F76A; Bucaramanga</li>
+      <li>&#x1F76A; Barrancabermeja</li>
+   </ul>
+  </div>
+  </div>
 
-<nav>
-<ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="historia.html">Historia</a></li>
-<li><a href="#">Noticias</a></li>
-</ul>
-</nav>
 <section id="inicio" class="bienvenida">
-<div class="contenedor-bienvenida">
-<div class="texto-bienvenida">
-<h2 id="bienvenida-titulo"></h2>
-<p id="bienvenida-texto"></p>
-</div>
-<div class="imagen-bienvenida">
-<img id="bienvenida-imagen" src="">
-</div>
-</div>
+  <div class="contenedor-bienvenida">
+    <div class="texto-bienvenida">
+      <h2>✨ Bienvenidos a Renovación 1-12 ✨</h2>
+      <p>
+        Un espacio de luz, sabiduría y fraternidad.<br><br>
+        En el corazón de Bucaramanga, se alza una logia que honra la tradición, cultiva el conocimiento y abraza el espíritu de renovación. Aquí, cada paso es una invitación al despertar interior, al respeto profundo por los valores universales y al compromiso con el crecimiento colectivo.<br><br>
+        Renovación 1-12 es más que una logia, es un faro que guía con principios de libertad, igualdad y fraternidad, abiertos a quienes buscan construir un mundo más justo, consciente y armonioso.
+      </p>
+	 <a href="historia_r.html" class="boton-conoce-mas">Conoce Más...</a>
+    </div>
+		<div class="imagen-bienvenida">
+			<img src="imagenes/Vitruviano.png">
+		</div>
+  </div>
 </section>
-<div id="secciones"></div>
-<footer>
-<p>&copy; 2025 Renovación 1-12. Todos los derechos reservados.</p>
-</footer>
+
+  <main>
+    <h2>Bienvenidos</h2>
+    <p>Explora los principios, historia y cultura de nuestra logia masónica Renovación 1-12.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Renovación 1-12. Todos los derechos reservados.</p>
+	<p>&#x1F76A; S∴F∴U∴</p>
+  </footer>
+ 
+ <!-- [script-java] -->
+  <script>
+    const banners = document.querySelectorAll('.banner-img');
+    let currentIndex = 0;
+
+    function changeBanner() {
+      banners[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % banners.length;
+      banners[currentIndex].classList.add('active');
+    }
+
+    setInterval(changeBanner, 4000); // troca a cada 4 segundos
+  </script>
+  <script>
+    const modal = document.getElementById("logiasModal");
+    const btn = document.getElementById("verLogiasBtn");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = () => modal.style.display = "block";
+    span.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => {
+      if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  };
+  </script>
+ 
 </body>
 </html>
